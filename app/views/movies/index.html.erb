@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Movies#index</h1>
+  <div class="cards">
+    <% @movies.each do |movie| %>
+      <%= link_to  movie_path(movie), style:"text-decoration:none" do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url %>);">
+          <%= movie.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
